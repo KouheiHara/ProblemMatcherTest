@@ -1,0 +1,23 @@
+name: eslint-test
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+env:
+  NODE_VERSION: 20.9.0
+  NPM_VERSION: 10.1.0
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: ./package-lock.json
+      - run: npm install -g npm@${{ env.NPM_VERSION }}
+      - run: npm ci
+      - run: npm run lint

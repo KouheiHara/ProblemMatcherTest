@@ -1,0 +1,14 @@
+{
+  "name": "problemmatchertest",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.7.0"
+  }
+}
