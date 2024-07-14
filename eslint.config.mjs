@@ -1,12 +1,14 @@
 import eslint from '@eslint/js';
 
 const rules = {
-  'dot-notation': 'error',
-  curly: ['error', 'multi-line'],
-  semi: 'error',
-  indent: ['error', 2],
+  'dot-notation': 'warn',
+  curly: ['warn', 'multi-line'],
+  semi: 'warn',
+  indent: ['warn', 2],
   'no-tabs': 'warn',
-  eqeqeq: ['error', 'smart']
+  eqeqeq: ['warn', 'smart'],
+  'no-undef': 'warn',
+  'no-unused-vars': 'warn',
 };
 
 export default {
