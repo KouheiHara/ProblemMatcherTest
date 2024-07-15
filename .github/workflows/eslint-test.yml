@@ -18,7 +18,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
           cache-dependency-path: ./package-lock.json
-      - run: echo "::add-matcher::.github/matcher/eslint-lint.json"
+      - run: echo "::add-matcher::.github/matcher/eslint-stylish.json"
       - run: npm install -g npm@${{ env.NPM_VERSION }}
       - run: npm ci
       - run: npm run lint
